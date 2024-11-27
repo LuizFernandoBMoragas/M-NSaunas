@@ -13,15 +13,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      colors:{
-        bgGray:'rgb(34, 34, 34)',
-        logoWhite: 'rgb(254, 254, 254)',
-        text: 'rgb(219, 219, 219)',
-        fireOrange: 'rgb(192, 114, 53)',
-        black: 'rgb(0, 0, 0)',
-        cardRed: '#f35c7a',
-      }
     },
+    colors:{
+      bgGray:'rgb(34, 34, 34)',
+      Gray500:'rgb(107, 114, 128)',
+      blue: '#000080',
+      logoWhite: 'rgb(254, 254, 254)',
+      text: 'rgb(219, 219, 219)',
+      fireOrange: 'rgb(192, 114, 53)',
+      deeperFireOrange: 'rgb(139, 63, 1)',
+      black: 'rgb(0, 0, 0)',
+      cardRed: '#f35c7a',
+    }
   },
   plugins: [],
 };
