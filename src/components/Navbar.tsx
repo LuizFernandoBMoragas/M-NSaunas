@@ -1,17 +1,18 @@
 import Link from 'next/link';
+import Image from 'next/image'
 import Menu from './Menu';
 import Navicons from './Navicons';
 
 
 const Navbar = () => {
     return (
-        <div className="h-20 px-4 md:px-8 md:h-40 lg:px-16 xl:px-32 2xl:px-64 relative bg-bgGray border-b-2 border-text">
+        <div className="h-20 px-4 md:px-8 md:h-80 lg:px-16 xl:px-32 2xl:px-64 relative bg-bgGray border-b-2 border-text">
             <div className='h-full flex items-center justify-between'>
                 {/* MOBILE */}
                 <div className='flex flex-row md:hidden'>
                     <Menu/>
                     <Link href="/">
-                        <div className='text-2xl tracking-wide text-logoWhite font-serif pl-4 hover:text-fireOrange'>M&N Saunas</div>
+                        <div className='text-2xl tracking-wide text-fireOrange font-serif pl-4 hover:text-logoWhite'>M&N Saunas</div>
                     </Link>
                 </div>
                 <div className='md:hidden'>
@@ -19,11 +20,12 @@ const Navbar = () => {
                 </div>
                 {/* BIGGER SCREENS */}
                 <div className='hidden md:flex flex-col w-full h-full items-center justify-evenly'>
-                    <div className='flex flex-row w-full items-center justify-between pb-6'>
+                    <div className='flex flex-row w-full items-center justify-between '>
                         <div></div>
                         <div>
                             <Link href="/">
-                            <div className='text-3xl tracking-wide text-logoWhite font-serif hover:text-fireOrange'>M&N Saunas</div>
+                            {/* <div className='text-3xl tracking-wide text-fireOrange font-serif hover:text-logoWhite'>M&N Saunas</div> */}
+                            <Image src='/logoWritten.png' alt='' width={250} height={0} className='z-20'/>
                             </Link>
                         </div>
                         <Navicons/>
