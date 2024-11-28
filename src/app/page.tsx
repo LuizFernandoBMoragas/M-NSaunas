@@ -1,16 +1,17 @@
-import Image from 'next/image';
+import ProductList from '@/components/ProductList';
+import MainImg from '@/components/MainImg';
+
+
 
 const HomePage = () => {
   return (
-    
-    <div className='h-[calc(100vh-80px)] overflow-hidden relative'>
-      <div className='w-max h-full flex md:hidden'>
-        <Image src='/your_wellness_comes_first_vert.png' alt='' fill/>
-      </div>
-      <div className='w-max h-full hidden md:flex'>
-        <Image src='/your_wellness_comes_first_hor.png' alt='' fill/>
-      </div>
+    <>
+    <MainImg/>
+    <div className='mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64'>
+        <h1 className='text-2xl'>Featured Products</h1>
+        <ProductList/>
     </div>
+    </>
   )
 }
 
