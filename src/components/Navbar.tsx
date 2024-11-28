@@ -24,8 +24,7 @@ const Navbar = () => {
                         <div></div>
                         <div>
                             <Link href="/">
-                            {/* <div className='text-3xl tracking-wide text-fireOrange font-serif hover:text-logoWhite'>M&N Saunas</div> */}
-                            <Image src='/logoWritten.png' alt='' width={250} height={0} className='z-20'/>
+                                <Image src='/logoWritten.png' alt='' width={250} height={0} className='z-20'/>
                             </Link>
                         </div>
                         <Navicons/>
