@@ -21,6 +21,7 @@ const config: Config = {
       logoWhite: 'rgb(254, 254, 254)',
       text: 'rgb(219, 219, 219)',
       fireOrange: 'rgb(192, 114, 53)',
+      disabledOrange: '#ffc89c',
       deeperFireOrange: 'rgb(139, 63, 1)',
       black: 'rgb(0, 0, 0)',
       cardRed: '#f35c7a',
