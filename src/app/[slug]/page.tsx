@@ -34,12 +34,18 @@ const SinglePage = async ({params}:{params:{slug: string}}) => {
                 dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(product.description || "") }}
                 />
                 <div className="h-[0.5px] bg-text"/>
-                    {product.price?.price === product.price?.discountedPrice ? 
-                    (<h2 className="text-text font-medium text-2xl">€{product.price?.discountedPrice}</h2>) : (
-                        <div className="flex items-center gap-4">
-                            <h3 className="text-text text-xl line-through">€{product.price?.price}</h3> 
-                        </div>
-                    )}
+                {product.price?.price === product.price?.discountedPrice ? (
+                <h2 className="font-medium text-2xl">${product.price?.price}</h2>
+                ) : (
+                <div className="flex items-center gap-4">
+                    <h3 className="text-xl text-logoWhite line-through">
+                    ${product.price?.price}
+                    </h3>
+                    <h2 className="font-medium text-logoWhite text-2xl">
+                    ${product.price?.discountedPrice}
+                    </h2>
+                </div>
+                )}
                 <div className="h-[0.5px] bg-text"/>
                 <Add/>
                 <div className="h-[0.5px] bg-text"/>
