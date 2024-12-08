@@ -1,8 +1,26 @@
+"use client"
+
 import ProductList from '@/components/ProductList';
 import CategoryList from '@/components/CategoriesList';
 import MainImg from '@/components/MainImg';
+import { useContext, useEffect } from 'react';
+import { WixClientContext } from '@/context/wixContext';
+import { useWixClient } from '@/hooks/useWixClient';
 
 const HomePage = () => {
+  const wixClient = useWixClient();
+
+  useEffect(()=>{
+    const getProducts = async () => {
+      const res = await wixClient.products.queryProducts().find();
+
+      console.log(res);
+    };
+
+    getProducts();
+  }, [wixClient])
+
+
   return (
     <>
     <MainImg/>
