@@ -31,9 +31,9 @@ const Navbar = () => {
                     </div>
                     <div className="bg-bgGray text-text w-full flex flex-row items-center justify-evenly uppercase font-normal">
                         <Link href={'/'} className='hover:text-fireOrange'>Homepage</Link>
-                        <Link href={'/'} className='hover:text-fireOrange'>Finnish Saunas</Link>
-                        <Link href={'/'} className='hover:text-fireOrange'>Infrared Saunas</Link>
-                        <Link href={'/'} className='hover:text-fireOrange'>Mixed Saunas</Link>
+                        <Link href={'/list?cat=finnish-saunas'} className='hover:text-fireOrange'>Finnish Saunas</Link>
+                        <Link href={'/list?cat=infrared-saunas'} className='hover:text-fireOrange'>Infrared Saunas</Link>
+                        <Link href={'/list?cat=mixed-infrared-finnish'} className='hover:text-fireOrange'>Mixed Saunas</Link>
                         <Link href={'/'} className='hover:text-fireOrange'>About us</Link>
                         <Link href={'/'} className='hover:text-fireOrange'>Contact</Link>
                     </div>
