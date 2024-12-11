@@ -24,9 +24,9 @@ const Footer = () => {
                     <div className='flex flex-col gap-8 items-center'>
                         <h1 className='font-medium text-xl text-fireOrange font-serif'>SHOP</h1>
                         <div className='flex flex-col gap-6'>
-                            <Link href='/' className='text-logoWhite hover:text-fireOrange'>Finnish Saunas</Link>
-                            <Link href='/' className='text-logoWhite hover:text-fireOrange'>Infrared Saunas</Link>
-                            <Link href='/' className='text-logoWhite hover:text-fireOrange'>Mixed Saunas</Link>
+                            <Link href='/list?cat=finnish-saunas' className='text-logoWhite hover:text-fireOrange'>Finnish Saunas</Link>
+                            <Link href='/list?cat=infrared-saunas' className='text-logoWhite hover:text-fireOrange'>Infrared Saunas</Link>
+                            <Link href='/list?cat=mixed-infrared-finnish' className='text-logoWhite hover:text-fireOrange'>Mixed Saunas</Link>
                         </div>
                     </div>
                     <div className='flex flex-col gap-8 items-center'>

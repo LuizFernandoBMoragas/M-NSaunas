@@ -67,7 +67,7 @@ const CartModal = () => {
                         <div className=''>Subtotal</div>
                         <div className=''>$49</div>
                     </div>
-                    <p className='text-bgGray text-sm font-normal mt-2 mb-4'>Don't worry about Shipping and Taxes. It's on us!</p>
+                    <p className='text-bgGray text-sm font-normal mt-2 mb-4'></p>
                     <div className='flex justify-between text-sm'>
                         <button className='rounded-md py-3 px-4 ring-1 ring-bgGray hover:font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)]'>View Cart</button>
                         <button className='rounded-md py-3 px-4 bg-black hover:font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)]'>Checkout</button>
