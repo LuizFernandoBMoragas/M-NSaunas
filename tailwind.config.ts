@@ -25,7 +25,8 @@ const config: Config = {
       deeperFireOrange: 'rgb(139, 63, 1)',
       black: 'rgb(0, 0, 0)',
       cardRed: '#f35c7a',
-      errorRed: "#d92121"
+      errorRed: "#d92121",
+      green: "#006400"
     }
   },
   plugins: [],
