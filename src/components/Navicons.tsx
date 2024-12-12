@@ -2,16 +2,20 @@
 
 import { useState } from "react";
 import Link from 'next/link';
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import CartModal from "./CartModal";
+import { useWixClient } from "@/hooks/useWixClient";
+import Cookies from "js-cookie";
 
 const Navicons = () => {
     const [isProfileOpen, setProfileOpen] = useState(false);
     const [isCartOpen, setCartOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const router = useRouter();
 
-    const isLoggedIn = false;
+    const wixClient = useWixClient();
+    const isLoggedIn = wixClient.auth.loggedIn();
 
     const handleProfile = () => {
         if(!isLoggedIn){
@@ -19,6 +23,15 @@ const Navicons = () => {
         }
         setProfileOpen((prev)=>!prev)
     };
+    
+    const handleLogout = async () => {
+        setIsLoading(true);
+        Cookies.remove("refreshToken");
+        const { logoutUrl } = await wixClient.auth.logout(window.location.href);
+        setIsLoading(false);
+        setProfileOpen(false);
+        router.push(logoutUrl);
+    }
 
     return (
         <div className='flex flex-row relative'>
@@ -30,7 +43,7 @@ const Navicons = () => {
             {isProfileOpen && 
                 <div className="absolute p-4 rounded-md top-12 left-0 text-sm bg-fireOrange z=20 shadow-xl">
                     <Link href='/' className="text-logoWhite hover:text-black">Profile</Link>
-                    <div className="mt-2 cursor-pointer text-logoWhite hover:text-black">Logout</div>
+                    <div className="mt-2 cursor-pointer text-logoWhite hover:text-black" onClick={handleLogout}>{isLoading ? "Logging out" : "Logout"}</div>
                 </div>}
 
 

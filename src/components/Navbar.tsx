@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import Menu from './Menu';
-import Navicons from './Navicons';
+import dynamic from 'next/dynamic';
+// import Navicons from './Navicons';
+
+const Navicons = dynamic(()=>import("./Navicons"), {ssr: false})
 
 
 const Navbar = () => {

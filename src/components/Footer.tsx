@@ -14,7 +14,7 @@ const Footer = () => {
                     </Link>
                     <p className='text-logoWhite'>137 Triq Edgar Bernanrd, Gzira, GZR 1707, Malta</p>
                     <span className='font-semibold text-logoWhite'>mnsaunas@gmail.com</span>
-                    <span className='font-semibold text-logoWhite'>+358 896478666</span>
+                    <span className='font-semibold text-logoWhite'>+359 896478666</span>
                     <div className='flex gap-2'>
                         <Image src='/fbbg.png' alt='' width={40} height={40} className=''/>
                         <Image src='/intbg.png' alt='' width={40} height={40}/>
