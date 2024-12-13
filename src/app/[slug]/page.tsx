@@ -39,10 +39,10 @@ const SinglePage = async ({params}:{params:{slug: string}}) => {
                 ) : (
                 <div className="flex items-center gap-4">
                     <h3 className="text-xl text-logoWhite line-through decoration-1 ">
-                    ${product.price?.price}
+                    €{product.price?.price}
                     </h3>
                     <h2 className="font-medium text-logoWhite text-2xl">
-                    ${product.price?.discountedPrice}
+                    €{product.price?.discountedPrice}
                     </h2>
                 </div>
                 )}
